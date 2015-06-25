@@ -41,6 +41,7 @@ namespace WebApplication4.Controllers
 
         // GET: api/Employee
         public IEnumerable<Employee> Get() {
+            System.Threading.Thread.Sleep(5000);
             return _employees;
         }
 
