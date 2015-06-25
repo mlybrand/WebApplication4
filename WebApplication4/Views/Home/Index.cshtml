@@ -2,7 +2,50 @@
     ViewBag.Title = "Home Page";
 }
 
+<div id="employees">
+
+</div>
+
+<table id="employee-table" class="table table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>SSN</th>
+            <th>Birth Date</th>
+            <th>Salary</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
 
 @section scripts {
+    <script id="employee-template" type="text/x-handlebars-template">
+        <div class="employee">
+            <div class="name">
+                <span class="my-label">Name:</span>
+                <span class="value">{{name}}</span>
+            </div>
+            <div class="social">
+                <span class="my-label">SSN:</span>
+                <span class="value">{{social}}</span>
+            </div>
+            <div class="birth-date">
+                <span class="my-label">Birth Date:</span>
+                <span class="value">{{birthDate}}</span>
+            </div>
+            <div class="salary">
+                <span class="my-label">Salary</span>
+                <span class="value">{{salary}}</span>
+            </div>
+        </div>
+    </script>
+    <script id="employee-table-template" type="text/x-handlebars-template">
+        <tr>
+            <td>{{name}}</td>
+            <td>{{social}}</td>
+            <td>{{birthDate}}</td>
+            <td>{{salary}}</td>
+        </tr>
+    </script>
     <script src="~/Scripts/app.js"></script>
 }

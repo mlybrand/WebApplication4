@@ -6,7 +6,13 @@
         }
     })
     .done(function (data) {
-        console.log(data);
+        var container = $("#employee-table tbody"),
+            source = $("#employee-table-template").html(),
+            template = Handlebars.compile(source);
+        data.forEach(function(item) {
+            var employeeDiv = template(item);
+            container.append(employeeDiv);
+        });
     })
     .fail(function (request, status, error) {
         console.log(request);

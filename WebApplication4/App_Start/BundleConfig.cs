@@ -10,7 +10,8 @@ namespace WebApplication4
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js",
-                        "~/Scripts/jquery.blockUI.js"));
+                        "~/Scripts/jquery.blockUI.js",
+                        "~/Scripts/handlebars.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
